@@ -26,7 +26,7 @@ namespace TestMVC.Controllers
             var testSvc = new TestService();
             TestModel tm = new TestModel();
             tm.ClickCount = 3;
-            tm.ID = 1;
+            tm.ID = 12;
             var model = tm;// testSvc.ClickCounter();
 
             return model.ClickCount;
