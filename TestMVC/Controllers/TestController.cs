@@ -14,14 +14,20 @@ namespace TestMVC.Controllers
         public PartialViewResult Test()
         {
              var testSvc = new TestService();
-            var model = testSvc.Get();
+            TestModel tm = new TestModel();
+            tm.ClickCount = 10;
+            tm.ID = 1;
+            var model = tm;// testSvc.Get();
             return PartialView(model);
         }
 
         public int TestCounter()
         {
             var testSvc = new TestService();
-            var model = testSvc.ClickCounter();
+            TestModel tm = new TestModel();
+            tm.ClickCount = 10;
+            tm.ID = 1;
+            var model = tm;// testSvc.ClickCounter();
 
             return model.ClickCount;
         }
