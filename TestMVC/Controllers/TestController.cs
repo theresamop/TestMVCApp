@@ -14,11 +14,7 @@ namespace TestMVC.Controllers
         public PartialViewResult Test()
         {
              var testSvc = new TestService();
-            TestModel tm = new TestModel();
-            tm.ClickCount = 55;
-            tm.ID = 1;
-            var model = tm;// testSvc.Get();
-            //daday test merge
+            var model =  testSvc.Get();
             return PartialView(model);
         }
 
@@ -26,9 +22,7 @@ namespace TestMVC.Controllers
         {
             var testSvc = new TestService();
             TestModel tm = new TestModel();
-            tm.ClickCount = 10;
-            tm.ID = 1;
-            var model = tm;// testSvc.ClickCounter();
+            var model = testSvc.ClickCounter();
 
             return model.ClickCount;
         }
