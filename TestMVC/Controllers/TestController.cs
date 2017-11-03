@@ -26,7 +26,12 @@ namespace TestMVC.Controllers
 
             return model.ClickCount;
         }
-
         
+        public void ResetCntr()
+        {
+            var testSvc = new TestService();
+            //TestModel tm = new TestModel();
+            testSvc.Reset();
+        }
     }
 }

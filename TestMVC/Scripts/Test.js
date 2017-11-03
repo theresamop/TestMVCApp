@@ -19,6 +19,21 @@ var clickCOunt = $("#ClickCount").val();
         else alert("exceeded max clicks allowed!");
     }
 
+    function Reset() {
+       
+        
+            $.ajax({
+                url: "Test/ResetCntr",
+
+            }).success(function (result) {
+                clickCOunt = result;
+                $("#txtCounter").val(result);
+            }).fail(function () {
+                alert("error");
+            });
+    
+  
+    }
 
     $(document).ready(function () {
         clickCOunt = $("#ClickCount").val();

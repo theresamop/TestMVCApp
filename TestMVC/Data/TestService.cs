@@ -50,6 +50,13 @@ namespace TestMVC.Data
              }
              return testModel;
          }
+
+        public void Reset()
+        {
+            var testModel = new TestModel();
+            testModel.ClickCount = 0;
+            Update(testModel);
+        }
         public TestModel Get()
         {
             var testModel =  new TestModel();
