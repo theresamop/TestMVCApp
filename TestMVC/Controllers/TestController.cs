@@ -15,7 +15,7 @@ namespace TestMVC.Controllers
         {
              var testSvc = new TestService();
             TestModel tm = new TestModel();
-            tm.ClickCount = 10;
+            tm.ClickCount = 5;
             tm.ID = 1;
             var model = tm;// testSvc.Get();
             return PartialView(model);
@@ -25,7 +25,7 @@ namespace TestMVC.Controllers
         {
             var testSvc = new TestService();
             TestModel tm = new TestModel();
-            tm.ClickCount = 10;
+            tm.ClickCount = 3;
             tm.ID = 1;
             var model = tm;// testSvc.ClickCounter();
 
