@@ -18,6 +18,7 @@ namespace TestMVC.Controllers
             tm.ClickCount = 10;
             tm.ID = 1;
             var model = tm;// testSvc.Get();
+            //daday test merge
             return PartialView(model);
         }
 
